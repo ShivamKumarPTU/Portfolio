@@ -35,7 +35,7 @@
     <main>
         <section class="hero">
             <h1>Hi, I'm <span class="highlight">Shivam Kumar.</span></h1>
-            <p class="tagline">Mechatronics student | Embedded Systems | Robotics | Android Dev</p>
+            <p class="tagline">Mechatronics student | Native Android App Developer | Robotics & Embedded Systems</p>
             <div class="socials">
                 <a href="https://github.com/" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank">LinkedIn</a>
@@ -122,7 +122,7 @@
                     <p>2020 — 2022 — 84.6%</p>
                 </div>
                 <div class="card">
-                    <h3>10th — JNV Rajgir</h3>
+                    <h3>10th — JNV Rajgir</p>
                     <p>2019 — 2020 — 89.6%</p>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                 </div>
             </form>
             <div class="contact-info">
-                <p>Email: <a href="mailto:2301116041@ptuniv.edu.in">2301116041@ptuniv.edu.in</a></p>
+                <p>Email: <a href="mailto:2301116041@ptuniv.edu.in" style = color:green>2301116041@ptuniv.edu.in</a></p>
                 <p>Phone: +91 94420 34658</p>
                 <p>Location: Puducherry, India</p>
             </div>
@@ -184,6 +184,20 @@
 
     <script type="text/javascript">
         window.onload = function() {
+            const messageBox = document.createElement('div');
+            messageBox.id = 'message-box';
+            messageBox.className = 'message-box';
+            document.body.appendChild(messageBox);
+
+            function showMessage(message, isError = false) {
+                messageBox.textContent = message;
+                messageBox.style.backgroundColor = isError ? '#e74c3c' : '#2ecc71';
+                messageBox.classList.add('show');
+                setTimeout(() => {
+                    messageBox.classList.remove('show');
+                }, 3000);
+            }
+
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
 
@@ -193,11 +207,11 @@
 
                 emailjs.sendForm(serviceID, templateID, this)
                     .then(() => {
-                        alert('Email sent successfully!');
+                        showMessage('Email sent successfully!');
                         this.reset(); // Reset form fields
                     }, (error) => {
                         console.error('FAILED...', error);
-                        alert('Failed to send email. Please try again.');
+                        showMessage('Failed to send email. Please try again.', true);
                     });
             });
         };
