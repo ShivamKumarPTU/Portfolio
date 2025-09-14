@@ -32,17 +32,46 @@ a {
     margin-left: 25px;
     color: #aaa;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+    /* Added to make them behave like buttons */
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
 }
 
 .nav a:hover {
-    color: #fff;
+    color: #0e0e0e;
+    background-color: #fff;
 }
 
-/* Hero Section */
+/* Hero Section with background image */
 .hero {
+    position: relative;
     padding: 120px 40px 80px;
     text-align: center;
+    background-image: url('images/Background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* This ensures a smooth transition to the image */
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Overlay for text readability on hero section */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -75,6 +104,29 @@ a {
     background: #fff;
     color: #000;
 }
+
+/* Custom message box for alerts */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    text-align: center;
+}
+
+.message-box.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* Section Headings */
 section {
@@ -254,6 +306,17 @@ h2 {
     padding: 25px;
     border-top: 1px solid #333;
     color: #aaa;
+}
+
+.contact-info a {
+    color: #3dbfff;
+}
+
+/* New style for the About Me section background */
+.about {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    margin-top: 50px; /* Added margin to create space */
 }
 
 /* Responsive adjustments */
