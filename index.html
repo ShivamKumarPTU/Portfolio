@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Kumar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            // Replace with your Public Key
+            emailjs.init({
+                publicKey: "_gRJcujBsQGyuWnej",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">SK</div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Hi, I'm <span class="highlight">Shivam Kumar.</span></h1>
+            <p class="tagline">Mechatronics student | Embedded Systems | Robotics | Android Dev</p>
+            <div class="socials">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank">LinkedIn</a>
+                <a href="mailto:2301116041@ptuniv.edu.in">Email</a>
+                <a href="assets/Shivam_Kumar_BioData.pdf" download>Resume</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                Hi, I’m a 3rd Year Mechatronics Engineering student at Puducherry Technological University with a strong passion
+                for Native Android Development, AI/ML integration, and Embedded Systems. My vision is to build impactful SaaS
+                products
+                and create technology that helps people on a global scale. I’m also excited about exploring opportunities to
+                work
+                and live internationally, gaining experiences that shape me both as an engineer and as a creator.
+            </p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>📌 Languages & Frameworks</h4>
+                    <p>C, C++, Java, Python, Kotlin, XML, Jetpack Compose</p>
+                </div>
+                <div class="card">
+                    <h4>🎨 UI/UX</h4>
+                    <p>Material Design, Responsive Layouts, Navigation Components</p>
+                </div>
+                <div class="card">
+                    <h4>🏗️ Architecture</h4>
+                    <p>MVVM, Clean Architecture, Dependency Injection (Hilt/Dagger)</p>
+                </div>
+                <div class="card">
+                    <h4>📦 Android Jetpack</h4>
+                    <p>LiveData, ViewModel, WorkManager, Paging, DataStore</p>
+                </div>
+                <div class="card">
+                    <h4>🗄️ Databases & Storage</h4>
+                    <p>Room, Firebase Firestore</p>
+                </div>
+                <div class="card">
+                    <h4>🌐 Backend & APIs</h4>
+                    <p>RESTful APIs, Retrofit</p>
+                </div>
+                <div class="card">
+                    <h4>🔥 Firebase Services</h4>
+                    <p>Authentication, Cloud Firestore, Cloud Storage, Push Notifications</p>
+                </div>
+                <div class="card">
+                    <h4>🧪 Testing & Debugging</h4>
+                    <p>JUnit, Espresso, Logcat, Android Profiler</p>
+                </div>
+                <div class="card">
+                    <h4>🤝 Version Control & Collaboration</h4>
+                    <p>Git, GitHub, GitLab</p>
+                </div>
+                <div class="card">
+                    <h4>⚙️ Other Tools</h4>
+                    <p>Gradle, Postman, Figma (UI/UX basics)</p>
+                </div>
+                <div class="card">
+                    <h4>Other</h4>
+                    <p>DSA · MATLAB · Teamwork · Problem-solving</p>
+                </div>
+                <div class="card">
+                    <h4>🤖 Embedded Systems</h4>
+                    <p>Arduino · Sensors · Microcontrollers · Circuit Design · IoT</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2>🎓 Education & Awards</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>B.Tech — Mechatronics</h3>
+                    <p>Puducherry Technological University (2023 — 2027)<br>CGPA: 9+ (till 3rd semester)</p>
+                </div>
+                <div class="card">
+                    <h3>12th — Bihar Board</h3>
+                    <p>2020 — 2022 — 84.6%</p>
+                </div>
+                <div class="card">
+                    <h3>10th — JNV Rajgir</h3>
+                    <p>2019 — 2020 — 89.6%</p>
+                </div>
+            </div>
+            <div class="grid awards">
+                <div class="card">
+                    <h3>🏆 Awards & Honors</h3>
+                    <ul>
+                        <li>Harihara Subramanian Scholar — PEALTRI FOUNDATION (2023)</li>
+                        <li>Fortunate_40 Scholar — FIITJEE (2020)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <h2>💼 Works</h2>
+
+            <div class="work-card card">
+                <h3>Radar System (Arduino)</h3>
+                <div class="work-images">
+                    <img src="images/radar1.jpg" alt="Radar System Image 1">
+                    <img src="images/radar2.jpg" alt="Radar System Image 2">
+                </div>
+                <p>Radar prototype using Arduino Uno R3, ultrasonic sensor, and servo motor. Learned sensor integration, servo control & embedded programming.</p>
+            </div>
+
+            <div class="work-card card">
+                <h3>Full Screen Timer (Android)</h3>
+                <div class="work-images">
+                    <img src="images/timer1.jpg" alt="Timer Image 1" class="portrait-img">
+                    <img src="images/timer2.jpg" alt="Timer Image 2" class="landscape-img">
+                </div>
+                <p>Minimal Android timer app with smart time picker and fullscreen countdown. Built in Kotlin with clean UI.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" class="contact-form">
+                <label>Your name<input type="text" name="name" required></label>
+                <label>Your email<input type="email" name="email" required></label>
+                <label>Message<textarea name="message" rows="5" required></textarea></label>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Send</button>
+                    <button type="reset" class="btn outline">Reset</button>
+                </div>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:2301116041@ptuniv.edu.in">2301116041@ptuniv.edu.in</a></p>
+                <p>Phone: +91 94420 34658</p>
+                <p>Location: Puducherry, India</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Shivam Kumar. Built with ❤️</p>
+    </footer>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // These IDs are from your EmailJS dashboard
+                const serviceID = "service_i597mpn";
+                const templateID = "template_o98ho1t";
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        alert('Email sent successfully!');
+                        this.reset(); // Reset form fields
+                    }, (error) => {
+                        console.error('FAILED...', error);
+                        alert('Failed to send email. Please try again.');
+                    });
+            });
+        };
+    </script>
+
+</body>
+
+</html>
